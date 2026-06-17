@@ -1,0 +1,61 @@
+@use "@/u" as u;
+
+.root {
+  padding: u.rem(50) 10vw;
+  font-size: u.rem(22);
+  font-family: serif;
+  line-height: 1.6;
+
+  p {
+  }
+
+  ul {
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  li {
+    &:not(:last-child) {
+      margin-bottom: u.rem(5);
+    }
+  }
+
+  @media screen and (max-width: u.$scwidth_m) {
+    padding-left: u.rem(70);
+    padding-right: u.rem(70);
+  }
+}
+
+.emph {
+  font-weight: 600;
+
+  &._company {
+    color: rgb(var(--p-industry-company-1000));
+  }
+
+  &._mil {
+    color: rgb(var(--p-industry-military-1000));
+  }
+
+  &._res {
+    color: rgb(var(--p-industry-research-1100));
+  }
+
+  &._serv {
+    color: rgb(var(--p-industry-serv-1100));
+  }
+
+  &._food {
+    color: rgb(var(--p-industry-food-1100));
+  }
+
+  &._empl {
+    color: rgb(var(--p-text-primary-1300));
+  }
+
+  &._head {
+    color: rgb(var(--p-industry-management-1100));
+  }
+}

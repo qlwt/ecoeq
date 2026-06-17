@@ -1,0 +1,223 @@
+@use "@/u" as u;
+
+$nav__eco_bgc_size: 60;
+$nav__eco_padding_ver: 10;
+$nav__eco_padding_hor: 10;
+$nav__eco_border_width: 2;
+
+.input_hidden {
+  width: 0;
+  height: 0;
+  user-select: none;
+  visibility: hidden;
+  pointer-events: none;
+
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+
+.root {
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding: u.rem(20) u.rem(20);
+  background-color: rgb(var(--p-bg-primary-1200));
+  box-shadow: 0 0 u.rem(10) u.rem(1) rgb(var(--p-bg-primary-1200));
+}
+
+.nav {
+  display: flex;
+  flex-wrap: nowrap;
+  row-gap: u.rem(20);
+  column-gap: u.rem(20);
+}
+
+.nav__node {
+  user-select: none;
+
+  border: none;
+  outline: none;
+
+  border-radius: 4px;
+  border-style: solid;
+  border-width: #{$nav__eco_border_width}px;
+
+  font-size: u.rem(17);
+
+  transition: background-color u.$trtime_fast, color u.$trtime_fast, border-color u.$trtime_fast;
+
+  &._active {
+    color: rgb(var(--p-text-primary-1200));
+    background-color: rgb(var(--p-bg-primary-0900));
+    border-color: rgb(var(--p-border-primary-1300));
+  }
+
+  &:not(._active) {
+    cursor: pointer;
+
+    color: rgb(var(--p-text-primary-1000));
+    background-color: rgb(var(--p-bg-primary-1000));
+    border-color: rgb(var(--p-border-primary-1000));
+
+    &:hover, &:focus {
+      color: rgb(var(--p-text-primary-1200));
+      background-color: rgb(var(--p-bg-primary-1100));
+    }
+
+    &:active {
+      color: rgb(var(--p-text-primary-1100));
+      border-color: rgb(var(--p-border-primary-1300));
+    }
+  }
+}
+
+.nav__act {
+  height: u.rem($nav__eco_bgc_size + $nav__eco_padding_ver * 2 + $nav__eco_border_width * 2);
+  padding: u.rem(10) u.rem(30);
+}
+
+.nav__eco {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  row-gap: u.rem(20);
+  column-gap: u.rem(20);
+  padding: u.rem($nav__eco_padding_ver) u.rem($nav__eco_padding_hor);
+}
+
+.nav__identity {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr auto;
+
+  row-gap: u.rem(5);
+  column-gap: u.rem(10);
+}
+
+.nav__bgc {
+  position: relative;
+
+  grid-row-start: 1;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+
+  width: u.rem($nav__eco_bgc_size);
+  height: u.rem($nav__eco_bgc_size);
+
+  border-radius: 4px;
+  background-color: var(--efsandbox__session_bgc);
+
+  .nav__node._active & {
+    cursor: pointer;
+  }
+}
+
+.nav__info {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  display: flex;
+  column-gap: u.rem(10);
+}
+
+.nav__info__top {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  display: grid;
+  align-items: center;
+
+  grid-template-columns: minmax(0, 1fr) auto;
+
+  width: u.rem(260);
+  column-gap: u.rem(10);
+}
+
+.nav__name {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+
+  .nav__node._active & {
+    cursor: pointer;
+  }
+}
+
+.nav__name__text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.nav__name__input {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  outline-offset: 2px;
+  outline: 2px solid rgb(var(--p-border-primary-1000));
+
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.nav__info__acts {
+  display: flex;
+  column-gap: u.rem(10);
+}
+
+.nav__info__act {
+  border: none;
+  outline: none;
+
+  border-radius: 4px;
+  background-color: transparent;
+  padding: u.rem(5) u.rem(5);
+
+  transition: background-color u.$trtime_fast;
+
+  &._style_delete {
+    color: rgb(200, 0, 0);
+  }
+
+  .nav__node._active & {
+    cursor: pointer;
+
+    &:hover, &:focus {
+      background-color: rgb(var(--p-bg-primary-1000));
+    }
+
+    &:active {
+      background-color: rgb(var(--p-bg-primary-1000));
+    }
+  }
+}
+
+.nav__info__field {
+  display: flex;
+  column-gap: u.rem(10);
+}
+
+.nav__info__icon {
+  &._style_monopoly {
+    color: rgb(var(--p-industry-company-1000));
+  }
+
+  &._style_food {
+    color: rgb(var(--p-industry-food-1000));
+  }
+
+  &._style_serv {
+    color: rgb(var(--p-industry-serv-1000));
+  }
+}

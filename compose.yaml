@@ -1,0 +1,13 @@
+services:
+  web:
+    restart: always
+
+    build: 
+      context: .
+      dockerfile: ./app/web/Dockerfile
+
+    env_file: 
+      - ./app/web/.docker.env
+
+    ports:
+      - 8080:8080

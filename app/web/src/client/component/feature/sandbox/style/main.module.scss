@@ -1,0 +1,18 @@
+@use "@/u" as u;
+
+.root {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+
+  padding: u.rem(50) 0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+
+  row-gap: u.rem(30);
+  column-gap: u.rem(30);
+  margin-top: u.rem(150);
+}

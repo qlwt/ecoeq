@@ -1,0 +1,8 @@
+{
+    "name": "ecoeq",
+    "private": true,
+    "workspaces": [
+        "app/*",
+        "pckg/*"
+    ]
+}

@@ -1,0 +1,14 @@
+**/*.env
+
+**/.config/
+**/.cache/
+**/.log/
+
+bun.lock
+yarn.lock
+pnpm-lock.yaml
+package.lock.json
+**/node_modules/
+
+**/build/
+**/storage/

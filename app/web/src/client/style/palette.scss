@@ -1,0 +1,68 @@
+@use "sass:math" as m;
+
+@function mul($l, $r) {
+  @return $l * $r;
+}
+
+:root {
+  --p-text-primary-0700: 102, 102, 102;
+  --p-text-primary-0800: 85, 85, 85;
+  --p-text-primary-0900: 68, 68, 68;
+  --p-text-primary-1000: 51, 51, 51;
+  --p-text-primary-1100: 34, 34, 34;
+  --p-text-primary-1200: 17, 17, 17;
+  --p-text-primary-1300: 0, 0, 0;
+
+  --p-text-popup-1000: 255, 255, 255;
+  --p-text-popup-1100: 255, 255, 255;
+  --p-text-popup-1200: 255, 255, 255;
+  --p-text-popup-1300: 255, 255, 255;
+  --p-text-brick-1000: 255, 255, 255;
+  --p-text-brick-1100: 255, 255, 255;
+  --p-text-brick-1200: 255, 255, 255;
+  --p-text-brick-1300: 255, 255, 255;
+
+  --p-text-act-1000: 255, 255, 255;
+  --p-text-act-1100: 255, 255, 255;
+  --p-text-act-1200: 255, 255, 255;
+  --p-text-act-1300: 255, 255, 255;
+
+  --p-bg-primary-0900: 255, 255, 255;
+  --p-bg-primary-1000: 238, 238, 238;
+  --p-bg-primary-1100: 223, 223, 223;
+  --p-bg-primary-1200: 208, 208, 208;
+  --p-bg-primary-1300: 193, 193, 193;
+  --p-bg-primary-1400: 178, 178, 178;
+
+  --p-bg-popup-1000: 51, 51, 51;
+  --p-bg-popup-1100: 68, 68, 68;
+
+  --p-bg-brick-1000: 130, 85, 42;
+  --p-bg-brick-1100: #{mul(150, 0.7)}, #{mul(115, 0.7)}, #{mul(52, 0.7)};
+
+  --p-bg-act-1000: 110, 140, 255;
+  --p-bg-act-1100: #{mul(110, 0.9)}, #{mul(140, 0.9)}, #{mul(255, 0.9)};
+  --p-bg-act-1200: #{mul(110, 0.8)}, #{mul(140, 0.8)}, #{mul(255, 0.8)};
+
+  --p-border-primary-1000: 180, 180, 180;
+  --p-border-primary-1100: 160, 160, 160;
+  --p-border-primary-1200: 140, 140, 140;
+  --p-border-primary-1300: 120, 120, 120;
+
+  --p-industry-unemployed-1000: 178, 190, 181;
+  --p-industry-unemployed-1100: #{mul(178, 0.7)}, #{mul(190, 0.7)}, #{mul(181, 0.7)};
+  --p-industry-research-1000: 79, 163, 217;
+  --p-industry-research-1100: #{mul(79, 0.7)}, #{mul(163, 0.7)}, #{mul(217, 0.7)};
+  --p-industry-maintenance-1000: 62, 74, 89;
+  --p-industry-maintenance-1100: #{mul(62, 0.7)}, #{mul(74, 0.7)}, #{mul(89, 0.7)};
+  --p-industry-food-1000: 115, 178, 95;
+  --p-industry-food-1100: #{mul(115, 0.7)}, #{mul(178, 0.7)}, #{mul(95, 0.7)};
+  --p-industry-serv-1000: 240, 62, 170;
+  --p-industry-serv-1100: #{mul(240, 0.7)}, #{mul(62, 0.7)}, #{mul(170, 0.7)};
+  --p-industry-management-1000: 201, 162, 39;
+  --p-industry-management-1100: #{mul(201, 0.7)}, #{mul(162, 0.7)}, #{mul(39, 0.7)};
+  --p-industry-company-1000: 138, 91, 62;
+  --p-industry-company-1100: #{mul(138, 0.7)}, #{mul(91, 0.7)}, #{mul(62, 0.7)};
+  --p-industry-military-1000: 139, 30, 30;
+  --p-industry-military-1100: #{mul(139, 0.7)}, #{mul(30, 0.7)}, #{mul(30, 0.7)};
+}

@@ -1,0 +1,52 @@
+@use "@/u" as u;
+
+.root {
+  display: flex;
+  align-items: center;
+
+  row-gap: u.rem(20);
+  column-gap: u.rem(20);
+
+  padding: 0 u.rem(30);
+}
+
+.field {
+  position: relative;
+
+  border-radius: 4px;
+  padding: u.rem(15) u.rem(15);
+
+  background-color: rgb(var(--p-bg-primary-1200));
+  box-shadow: 0 0 u.rem(5) u.rem(0) rgb(var(--p-bg-primary-1200));
+}
+
+.field__iconpair {
+  display: flex;
+  align-items: center;
+
+  &._big {
+    column-gap: u.rem(20);
+  }
+
+  &._small {
+    column-gap: u.rem(7);
+  }
+}
+
+.field__icon {
+  font-size: u.rem(21);
+  color: rgb(var(--p-text-primary-1000));
+
+  &._style_company {
+    color: rgb(var(--p-industry-company-1000));
+  }
+
+  &._style_military {
+    color: rgb(var(--p-industry-military-1000));
+  }
+}
+
+.field__text {
+  font-size: u.rem(19);
+  color: rgb(var(--p-text-primary-1000));
+}

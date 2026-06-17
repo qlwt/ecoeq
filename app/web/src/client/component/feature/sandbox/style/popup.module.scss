@@ -1,0 +1,30 @@
+@use "@/u" as u;
+
+.popup {
+  position: absolute;
+  top: 100%;
+  left: calc(var(--efsandbox__left) * 100%);
+  transform: translateX(-50%);
+
+  font-size: u.rem(18);
+  white-space: nowrap;
+  color: rgb(var(--p-text-popup-1000));
+
+  border-radius: u.rem(8);
+  padding: u.rem(30) u.rem(40);
+  background: rgb(var(--p-bg-popup-1000));
+
+  transition: opacity u.$trtime_fast;
+
+  &._open {
+    opacity: 1;
+
+    @starting-style {
+      opacity: 0;
+    }
+  }
+
+  &:not(._open) {
+    opacity: 0;
+  }
+}
