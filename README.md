@@ -24,7 +24,7 @@ It is important to note, that it is not based on real Science, more so on the gu
 
 ### How to run
 
-That is a very simple Website, without server side.
+That is a very simple Website, without server side beyound serving static files.
 
 1. Copy the repository
 2. Go to `./app/web`, create `.env` and `.docker.env` and fill them according to provided `.env.example`
